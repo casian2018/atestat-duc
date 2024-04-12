@@ -62,9 +62,9 @@
                             <span>Acces exclusiv la un forum online</span>
                         </li>
                     </ul>
-                    <a href="#"
-                        class="text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Get
-                        started</a>
+                    <a href="/buy"
+                        class="text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Cumpara
+                        Acum</a>
                 </div>
 
                 <div
@@ -118,9 +118,9 @@
                             <span>Acces exclusiv la un forum online</span>
                         </li>
                     </ul>
-                    <a href="#"
-                        class="text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Get
-                        started</a>
+                    <a href="/buy"
+                        class="text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Cumpara
+                        Acum</a>
                 </div>
 
                 <div
@@ -184,36 +184,38 @@
                             <span>Asistenta 24/7</span>
                         </li>
                     </ul>
-                    <a href="#"
-                        class="text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Get
-                        started</a>
+                    <a href="/buy"
+                        class="text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Cumpara
+                        Acum</a>
                 </div>
             </div>
         </div>
     </section>
-    
-    <div id="paypal-button-container" style="max-width:1000px;"></div>
+
+    <div class="buttons flex justify-center">
+        <div id="paypal-button-container"></div>
+    </div>
 </template>
 
 
 
 <script>
 export default {
-  mounted() {
-    const script = document.createElement('script');
-    script.src = 'https://www.sandbox.paypal.com/sdk/js?client-id=AbdSXN0YpY67db5vOguCrGUpUCcZhdU2GpAHJSfESYt0BATO1pXGh3ZV3sKWMA3EyRskMAWv6Tr7OSHC&components=buttons';
-    script.addEventListener('load', this.initializePayPalButtons);
-    document.body.appendChild(script);
-  },
-  methods: {
-    initializePayPalButtons() {
-      // Render PayPal buttons after SDK script is loaded
-      paypal.Buttons({
-        style: {
-          disableMaxWidth: true
-        },
-      }).render('#paypal-button-container');
+    mounted() {
+        const script = document.createElement('script');
+        script.src = 'https://www.sandbox.paypal.com/sdk/js?client-id=AbdSXN0YpY67db5vOguCrGUpUCcZhdU2GpAHJSfESYt0BATO1pXGh3ZV3sKWMA3EyRskMAWv6Tr7OSHC&components=buttons';
+        script.addEventListener('load', this.initializePayPalButtons);
+        document.body.appendChild(script);
+    },
+    methods: {
+        initializePayPalButtons() {
+            // Render PayPal buttons after SDK script is loaded
+            paypal.Buttons({
+                style: {
+                    disableMaxWidth: true
+                },
+            }).render('#paypal-button-container');
+        }
     }
-  }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-5" id="testimonials">
+    <div class="py-8" id="testimonials">
     <div class="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center xl:px-0">
         <div class="text-sm font-bold tracking-wider text-indigo-600 uppercase">Pareri</div>
         <h2 class="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">Ce spune lumea despre produsul nostru</h2>
